@@ -1,0 +1,102 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('FONDO.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #990F02;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 50px;
+}
+
+/* Slider */
+.slider-frame {
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0%, 20% {margin-left: 0;}
+    25%, 45% {margin-left: -100%;}
+    50%, 70% {margin-left: -200%;}
+    75%, 100% {margin-left: -300%;}
+}
+
+/* Contenido centrado */
+.centered-content {
+    position: relative;
+    padding: 20px; /* Agrega espacio alrededor del contenido centrado */
+}
+
+.centered-image {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background-color: transparent;
+}
+
+.centered-image img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.hidden-text {
+    display: none;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #990F02;
+    padding: 10px; /* Reduce el padding del texto oculto para móviles */
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .hidden-text {
+        font-size: 16px; /* Ajusta el tamaño de fuente del texto oculto para móviles */
+    }
+}
